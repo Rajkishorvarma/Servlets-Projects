@@ -1,0 +1,28 @@
+package com.durgasoft.controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.durgasoft.beans.Student;
+import com.durgasoft.service.StudentService;
+
+@WebServlet("*.do")
+public class ControllerServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String requestURI = request.getRequestURI();
+		String sid="";
+		String sname="";
+		String saddr="";
+		Student student = null;
+		StudentService studentService = null;
+		String status="";
+		
+		
+	}
+
+}

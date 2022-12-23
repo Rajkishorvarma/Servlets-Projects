@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>User_Reg</title>
+</head>
+<body>
+	<h2 style="color: red" align="center">Durga Software Solution</h2>
+	<h3 style="color: blue" align="center">User Registration Form</h3>
+	<form  method ="post" action="./reg">
+	<table align="center">
+	<tr>
+		<td>User Name</td>
+		<td><input type="text" name="uname"></td>
+	</tr>
+	<tr>
+		<td>User Qualification </td>
+		<td>
+			<input type="checkbox" name="uqual" value="BCA"/>BCA
+			<input type="checkbox" name="uqual" value="MCA"/>MCA
+			<input type="checkbox" name="uqual" value="B.Tech"/>B.Tech
+			<input type="checkbox" name="uqual" value="M.Tech"/>M.Tech
+			<input type="checkbox" name="uqual" value="PHD"/>PHD
+		</td>
+	</tr>
+	<tr>
+		<td>Gender</td>
+		<td>
+			<input type="radio" name="ugender" value="Male">Male
+			<input type="radio" name="ugender" value="Female">Female
+			<input type="radio" name="ugender" value="Transgender">Transgender
+		</td>
+	</tr>
+	<tr> 
+		<td>User Technologies</td>
+		<td>
+			<select size="4" name="utech" multiple="multiple">
+				<option value="C">C</option>
+				<option value="C++">C++</option>
+				<option value="JAVA">JAVA</option>
+				<option value="PYTHON">PYTHON</option>
+				<option value=".NET">.NET</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>User Profession</td>
+		<td>
+			<select name="uprof">
+				<option value="Student">Student</option>
+				<option value="Teacher">Teacher</option>
+				<option value="Employee">Employee</option>
+				<option value="Gaandu">Gaandu</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Address</td>
+		<td>
+			<textarea name="uaddr"rows="4"cols="30"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Registration"/></td>
+		
+	</tr>
+	</table>
+	</form>
+</body>
+</html>

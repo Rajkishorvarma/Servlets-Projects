@@ -1,0 +1,7 @@
+package com.durgasoft.factory;
+
+import com.durgasoft.service.StudentService;
+
+public class StudentServiceFactory {
+	private static StudentService studentService;
+}

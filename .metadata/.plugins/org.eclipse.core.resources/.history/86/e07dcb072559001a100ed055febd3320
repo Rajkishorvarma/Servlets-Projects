@@ -1,0 +1,21 @@
+package com.durgasoft.service;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import jdk.nashorn.internal.ir.ForNode;
+
+public class StudentService {
+	Connection con;
+	Statement st;
+	ResultSet rs;
+	public StudentService() {
+		try {
+			class.ForName
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,48 @@
+package com.durgasoft.service;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import com.durgasoft.beans.Student;
+
+public class StudentService {
+	Connection con=null;
+	Statement st=null;
+	ResultSet rs=null;
+	public StudentService() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con= DriverManager.getConnection("jdbc:mysql://localhost:3306/rajdb","root","root");
+			st=con.createStatement();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void add(Student std) {
+		try {
+			st.executeUpdate("insert into student values('"+std.getSid()+"','"+std.getSname()+"','"+std.getSaddr()+"')");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public ArrayList<Student> getAllStudent(){
+		ArrayList<Student> studentList =null;
+		try {
+			rs = st.executeQuery("select * from student");
+			studentList = new ArrayList<Student>();
+			while(rs.next()) {
+				Student std = new Student();
+				std.setSid(rs.getString("SID"));
+				std.setSname(rs.getString("SNAME"));
+				std.setSaddr(rs.getString("SADDR"));
+				studentList.add(std);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return studentList;
+	}
+}
